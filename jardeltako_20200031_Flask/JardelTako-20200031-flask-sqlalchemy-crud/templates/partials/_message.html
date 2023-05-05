@@ -1,0 +1,13 @@
+{% with messages = get_flashed_messages() %} {% if messages %} {% for message in 
+messages %} <!-- Obtenemos los mensajes y se le asigna a una variable messages -->
+<!-- Tambien se utilizan controles para verificar si hay mensajes o no -->
+<div class="alert alert-info alert-dismissible fade show" role="alert"> <!-- Gracias a jinja se pueden usar la funcionalidad de reutilizar bloques -->
+  {{message}}
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"c 
+    aria-label="Close"
+  ></button>
+</div>
+{% endfor %} {% endif %} {% endwith %}
